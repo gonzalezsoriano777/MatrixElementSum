@@ -9,12 +9,11 @@ namespace Matrix
         int[,] rooms = new int[,] { { 0, 1, 1, 2 }, { 0, 5, 0, 0 }, { 2, 0, 3, 3 } };
 
         [Test]
-        public void ReturnTheFirstRow()
+        public void ReturnTheFirstRowsRoom()
         {
             int[,] output = new int[,] { { 0, 1, 1, 2 }, { 0, 5, 0, 0 }, { 2, 0, 3, 3 } };
 
             Assert.AreEqual(rooms[0, 3], output[0, 3]);
-
         }
         
         [Test]
