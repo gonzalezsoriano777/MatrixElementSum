@@ -16,20 +16,35 @@ namespace Matrix
         }
         
         [Test]
-        public void GetAllFloorRoomsWithValesSummedUp()
+        public void GetAllFirstAndSecondFloorRoomsWithValesSummedUp()
         {
-
             int roomsSummedUp = 0;
 
             int expectedOutput = 9;
 
-            for(int floor = 0; floor < matrix.GetLength(1); floor++)
+            int[] roomsFromSecondAndThirdFloor = new int[4];
+
+            for(int rooms = 0; rooms < matrix.GetLength(1); rooms++)
             {
-                for (int room = 0; room < matrix.GetLength(1); room++)
+               
+            }
+            Assert.AreEqual(roomsSummedUp, expectedOutput);
+        }
+
+        [Test]
+        public void ReturnAllRoomsFromSecondAndThirdFloor()
+        {
+            int sum = 0;
+
+            int expectedOutput = 13;
+
+            for (int floor = 0; floor < matrix.GetLength(1); floor++)
+            {
+                for (int rooms = 0; rooms < matrix.GetLength(1); rooms++)
                 {
-                    if (matrix[room, floor] != 0)
+                    if (matrix[rooms, floor] != 0)
                     {
-                        roomsSummedUp += matrix[room, floor];
+                        sum += matrix[rooms, floor];
                     }
                     else
                     {
@@ -37,7 +52,10 @@ namespace Matrix
                     }
                 }
             }
-            Assert.AreEqual(roomsSummedUp, expectedOutput);
+
+            Assert.AreEqual(sum, expectedOutput);
+
         }
+
     }
 }
