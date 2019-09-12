@@ -23,7 +23,7 @@ namespace Matrix
 
             int expectedOutput = 9;
 
-            for(int floor = 0; floor < matrix.GetLength(0); floor++)
+            for(int floor = 0; floor < matrix.GetLength(1); floor++)
             {
                 for (int room = 0; room < matrix.GetLength(1); room++)
                 {
